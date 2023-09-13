@@ -7,7 +7,7 @@ const Owner = () => {
     <div className="flex flex-col items-center mt-4">
         <h1 className="text-[2rem] font-bold ">03_AuieAthip</h1>
         <div className="max-w-[500px] mb-4">
-          <img className="rounded-xl w-full mt-2 shadow-md max-h-[350px] object-cover" src="../img/owner.jpg" alt="" />
+          <img className="rounded-xl w-full mt-2 shadow-md max-h-[350px] object-cover" src="../img/owner.jpg" alt="owner" />
         </div>
         <div className="max-w-lg flex flex-col text-center">
           <h2 >History</h2>
