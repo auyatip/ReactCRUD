@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import Navbar from './Navbar/navbar'
 
 const Edit = () => {
-    const [data,setData] = useState([])
+    const [data,setData] = useState({   })
     const {id}= useParams()
     const navigate = useNavigate();
 
@@ -30,14 +30,17 @@ const Edit = () => {
         );
         
         setData(response.data)
+       
         navigate('/adminpage')
     }
     };
 
+    console.log(name)
+
     return (
         <>
             <Navbar/>
-            <div className='mt-6'>
+            <div className='mt-8'>
                 <h1 className="mx-12 my-2">Edit User Here : </h1>
                 <div className="flex gap-4 mx-12">
                     

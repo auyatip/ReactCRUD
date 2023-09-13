@@ -1,3 +1,8 @@
+
+// GITHUB REPO : https://github.com/auyatip/ReactCRUD
+// Vercel : https://react-crud-roan.vercel.app/
+
+
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar/navbar"
 
@@ -42,7 +47,6 @@ const Home = () => {
     </>
   )
 }
-
 
 
 export default Home

@@ -3,13 +3,14 @@ import Navbar from "./Navbar/navbar"
 import { Link, useParams } from "react-router-dom"
 import axios from "axios"
 import { v4 as uuidv4} from 'uuid';
-
+import Edit from "./edit";
  const Admin = () => {
 // input to api
   const [name,setName]= useState('')
   const [lastname,setLastname]= useState('')
   const [position,setPosition]= useState('')
-  
+// showEdit
+  const [showEdit,setShowEdit] = useState(false)
 
 // IsValidate 
   const IsValidate = () => {
@@ -52,7 +53,7 @@ import { v4 as uuidv4} from 'uuid';
     
         getUser();
       }, []);
-      console.log(users)
+      
 
 //Delete Data
     const DeleteData = async(id) => {
@@ -112,6 +113,9 @@ import { v4 as uuidv4} from 'uuid';
         onClick={()=>AddData(name,lastname,position)}>ADD
         </button>
       </div>
+    
+    {/* Edit Form Input display */}
+    {showEdit ? <Edit/>:''}
 
     {/* Table of User */}
       <div className="flex justify-center text-center m-10">
