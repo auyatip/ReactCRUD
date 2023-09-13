@@ -12,7 +12,7 @@ const Navbar = () => {
                     </Link>
 
                   <Link to='/owner' 
-                  className="bfont-medium text-xl px-3 py-2 text-white rounded-lg hover:bg-slate-300 hover:duration-300" 
+                  className="bfont-medium text-xl px-3 py-2 text-white rounded-lg hover:bg-slate-300 hover:duration-300 hover:text-slate-900" 
                   type="button">
                     Owner
                     </Link>
