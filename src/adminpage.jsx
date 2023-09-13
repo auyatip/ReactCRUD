@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Navbar from "./Navbar/navbar"
 import { Link, useParams } from "react-router-dom"
 import axios from "axios"
-// import { v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4} from 'uuid';
 import Edit from "./edit";
  const Admin = () => {
 // input to api
@@ -24,7 +24,7 @@ import Edit from "./edit";
 // Add Data
   const AddData = async(name,lastname,position) => {
     const request = {
-      // id: uuidv4(),
+      id: uuidv4(),
       name: name,
       lastname: lastname,
       position: position
