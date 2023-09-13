@@ -24,7 +24,7 @@ import Edit from "./edit";
 // Add Data
   const AddData = async(name,lastname,position) => {
     const request = {
-      id: uuidv4(),
+      // id: uuidv4(),
       name: name,
       lastname: lastname,
       position: position
@@ -34,7 +34,7 @@ import Edit from "./edit";
         "https://jsd5-mock-backend.onrender.com/members",
         request
       );
-      // location.reload();
+      location.reload();
     }
     
   }
