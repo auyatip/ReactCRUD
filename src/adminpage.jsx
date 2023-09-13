@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Navbar from "./Navbar/navbar"
 import { Link, useParams } from "react-router-dom"
 import axios from "axios"
-import { v4 as uuidv4} from 'uuid';
+// import { v4 as uuidv4} from 'uuid';
 import Edit from "./edit";
  const Admin = () => {
 // input to api
@@ -10,7 +10,7 @@ import Edit from "./edit";
   const [lastname,setLastname]= useState('')
   const [position,setPosition]= useState('')
 // showEdit
-  const [showEdit,setShowEdit] = useState(false)
+  // const [showEdit,setShowEdit] = useState(false)
 
 // IsValidate 
   const IsValidate = () => {
@@ -115,8 +115,8 @@ import Edit from "./edit";
       </div>
     
     {/* Edit Form Input display */}
-    {showEdit ? <Edit/>:''}
-      <button onClick={()=>setShowEdit(!showEdit)} className="border">Show</button>
+    {/* {showEdit ? <Edit/>:''}
+      <button onClick={()=>setShowEdit(!showEdit)} className="border">Show</button> */}
     {/* Table of User */}
       <div className="flex justify-center text-center m-10 ">
           <table  className="border-collapse">
