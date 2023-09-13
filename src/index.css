@@ -4,6 +4,6 @@
 
 body {
     min-height: 100vh;
-    background:url(http://www.gvntmc.com/wp-content/uploads/2016/07/Savin-NY-Website-Background-Web.jpg)no-repeat;
+    background:url('../img/bg.jpg')no-repeat;
     background-size:cover;
 }
