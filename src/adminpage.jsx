@@ -116,7 +116,7 @@ import Edit from "./edit";
     
     {/* Edit Form Input display */}
     {showEdit ? <Edit/>:''}
-      {/* <button onClick={()=>setShowEdit(!showEdit)} className="border">Show</button> */}
+      <button onClick={()=>setShowEdit(!showEdit)} className="border">Show</button>
     {/* Table of User */}
       <div className="flex justify-center text-center m-10 ">
           <table  className="border-collapse">
