@@ -34,7 +34,7 @@ import Edit from "./edit";
         "https://jsd5-mock-backend.onrender.com/members",
         request
       );
-      location.reload();
+      // location.reload();
     }
     
   }
@@ -116,7 +116,7 @@ import Edit from "./edit";
     
     {/* Edit Form Input display */}
     {showEdit ? <Edit/>:''}
-
+      {/* <button onClick={()=>setShowEdit(!showEdit)} className="border">Show</button> */}
     {/* Table of User */}
       <div className="flex justify-center text-center m-10 ">
           <table  className="border-collapse">
@@ -143,6 +143,7 @@ import Edit from "./edit";
                     <Link to={`/edit/${item.id}`} class="focus:outline-none text-white bg-yellow-700 hover:bg-yellow-800 rounded-lg px-2 py-1">
                           Edit
                     </Link>  
+                    
                   </td>
                   <td className="border-b px-4 py-2">
                       <button onClick={()=>DeleteData(item.id)} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 rounded-lg px-2 py-1">
@@ -155,6 +156,7 @@ import Edit from "./edit";
               
               </tbody>
           </table>
+          
       </div>
 
 

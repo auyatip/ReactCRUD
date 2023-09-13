@@ -4,8 +4,13 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import Navbar from './Navbar/navbar'
 
 const Edit = () => {
-    const [data,setData] = useState({   })
+    
+// useParams ใช้ดึงค่า ที่ส่งมาจาก route แม่ 
+// Hook นี้จะ return Object ของ Dynamic Params จาก URL 
+// ปัจจุบันที่ตรงกับ <Route path>
     const {id}= useParams()
+
+    const [data,setData] = useState({   })
     const navigate = useNavigate();
 
 // IsValidate 
@@ -35,11 +40,11 @@ const Edit = () => {
     }
     };
 
-    console.log(name)
+    console.log(id)
 
     return (
         <>
-            <Navbar/>
+            {/* <Navbar/> */}
             <div className='mt-8'>
                 <h1 className="mx-12 my-2">Edit User Here : </h1>
                 <div className="flex gap-4 mx-12">
