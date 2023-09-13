@@ -118,7 +118,7 @@ import Edit from "./edit";
     {showEdit ? <Edit/>:''}
 
     {/* Table of User */}
-      <div className="flex justify-center text-center m-10">
+      <div className="flex justify-center text-center m-10 ">
           <table  className="border-collapse">
           <caption class="caption-top">
         Table : List of users
