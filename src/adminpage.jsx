@@ -3,14 +3,20 @@ import Navbar from "./Navbar/navbar"
 import { Link, useParams } from "react-router-dom"
 import axios from "axios"
 import { v4 as uuidv4} from 'uuid';
-import Edit from "./edit";
+// Props MockData from HomePage
+import {mockEmployees} from './Home';
+
+
  const Admin = () => {
 // input to api
   const [name,setName]= useState('')
   const [lastname,setLastname]= useState('')
   const [position,setPosition]= useState('')
-// showEdit
-  // const [showEdit,setShowEdit] = useState(false)
+
+// Props - mockData
+const [mockData, setMockData] = useState(mockEmployees);
+
+
 
 // IsValidate 
   const IsValidate = () => {
@@ -133,26 +139,48 @@ import Edit from "./edit";
                 </tr>
               </thead>
               <tbody>
-              {users.map((item,index)=> (
-                <tr className="bg-gray-100" key={index}>
-                  <td className="border-b px-4 py-2">{item.name}</td>
-                  <td className="border-b px-4 py-2 ">{item.lastname}</td>
-                  <td className="border-b px-4 py-2">{item.position}</td>
-                  
-                  <td className="border-b px-4 py-2">
-                    <Link to={`/edit/${item.id}`} class="focus:outline-none text-white bg-yellow-700 hover:bg-yellow-800 rounded-lg px-2 py-1">
+
+                {/* MockData */}
+              {mockData.map((items, index) => (
+              <tr className="bg-gray-100" key={index}>
+                <td className="border-b px-4 py-2">{items.name}</td>
+                <td className="border-b px-4 py-2 ">{items.lastname}</td>
+                <td className="border-b px-4 py-2">{items.position}</td>
+                <td className="border-b px-4 py-2">
+                    <Link to={`/edit/${items.id}`} class="focus:outline-none text-white bg-yellow-700 hover:bg-yellow-800 rounded-lg px-2 py-1">
                           Edit
                     </Link>  
                     
                   </td>
                   <td className="border-b px-4 py-2">
-                      <button onClick={()=>DeleteData(item.id)} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 rounded-lg px-2 py-1">
+                      <button onClick={()=>DeleteData(items.id)} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 rounded-lg px-2 py-1">
+                        Delete
+                        </button>
+                  </td>
+              </tr>
+            ))}
+              {/* APIDATA */}
+              {users.map((items,index)=> (
+                <tr className="bg-gray-100" key={index}>
+                  <td className="border-b px-4 py-2">{items.name}</td>
+                  <td className="border-b px-4 py-2 ">{items.lastname}</td>
+                  <td className="border-b px-4 py-2">{items.position}</td>
+                  
+                  <td className="border-b px-4 py-2">
+                    <Link to={`/edit/${items.id}`} class="focus:outline-none text-white bg-yellow-700 hover:bg-yellow-800 rounded-lg px-2 py-1">
+                          Edit
+                    </Link>  
+                    
+                  </td>
+                  <td className="border-b px-4 py-2">
+                      <button onClick={()=>DeleteData(items.id)} class="focus:outline-none text-white bg-red-700 hover:bg-red-800 rounded-lg px-2 py-1">
                         Delete
                         </button>
                   </td>
                 </tr>
 
               ))}
+              
               
               </tbody>
           </table>

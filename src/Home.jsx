@@ -5,8 +5,9 @@
 
 import { Link } from "react-router-dom"
 import Navbar from "./Navbar/navbar"
+import Admin from './adminpage'
 
-const mockEmployees = [
+export const mockEmployees = [
   {
     id: 0,
     name: "mock",

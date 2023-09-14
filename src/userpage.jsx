@@ -2,8 +2,13 @@ import { useEffect, useState } from "react"
 import Navbar from "./Navbar/navbar"
 import { Link } from "react-router-dom"
 import axios from 'axios'
+// Props MockData from HomePage
+import {mockEmployees} from './Home';
+
 const User = () => {
   const [users,setUser] = useState([])
+// Props - mockData
+const [mockData, setMockData] = useState(mockEmployees);
 
   useEffect(() => {
     const getUser = async () => {
@@ -47,6 +52,18 @@ const User = () => {
                 </tr>
               </thead>
               <tbody className="bg-gray-100">
+            
+            {/* MockData */}
+            {mockData.map((items, index) => (
+              <tr className="bg-gray-100" key={index}>
+                <td className="border-b px-4 py-2">{items.name}</td>
+                <td className="border-b px-4 py-2 ">{items.lastname}</td>
+                <td className="border-b px-4 py-2">{items.position}</td>
+               
+              </tr>
+            ))}
+            
+            {/* APIDATA */}
               {users.map((item,index)=> (
                 <tr className="" key={index}>
                   <td className="border-b px-4 py-2">{item.name}</td>
